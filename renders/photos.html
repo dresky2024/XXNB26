@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ФОТО ПОСЛЕ РЕМОНТА · 43м² · ХАЙ-ТЕК</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#04040c;font-family:'Arial',sans-serif;color:#ccc;overflow-x:hidden}
+.top{background:#000;border-bottom:2px solid #00d4ff;padding:16px 40px;
+  display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.top-title{color:#00d4ff;font-size:18px;letter-spacing:4px;font-weight:700}
+.top-sub{color:#444;font-size:11px;letter-spacing:2px}
+.hero{text-align:center;padding:64px 20px 40px;background:linear-gradient(180deg,#04040c,#090916)}
+.hero h1{font-size:48px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:12px}
+.hero h1 span{color:#00d4ff}
+.hero p{color:#555;font-size:13px;letter-spacing:3px}
+.gallery{padding:32px 40px;display:flex;flex-direction:column;gap:80px}
+.room-entry{display:flex;flex-direction:column;gap:16px}
+.room-header{display:flex;align-items:center;gap:16px;padding-bottom:16px;
+  border-bottom:1px solid rgba(0,212,255,.15)}
+.rh-num{font-size:56px;font-weight:900;color:rgba(0,212,255,.1);line-height:1;font-family:monospace}
+.rh-info h2{font-size:28px;font-weight:900;letter-spacing:3px;color:#fff}
+.rh-info p{font-size:11px;color:#00d4ff;letter-spacing:2px;margin-top:4px;font-family:monospace}
+.photo-block{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.photo-big{grid-column:1 / -1}
+canvas{display:block;width:100%;border:1px solid rgba(0,212,255,.12)}
+.photo-label{background:#000;padding:8px 14px;
+  font-size:10px;color:#00d4ff;letter-spacing:2px;font-family:monospace}
+.room-specs{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.spec-tag{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);
+  padding:5px 12px;font-size:11px;color:#00d4ff;font-family:monospace;letter-spacing:1px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:4px}
+.before-photo,.after-photo{position:relative}
+.ba-tag{position:absolute;top:8px;left:8px;z-index:5;padding:4px 10px;
+  font-size:10px;font-family:monospace;letter-spacing:2px;font-weight:700}
+.ba-tag.before{background:rgba(239,68,68,.8);color:#fff}
+.ba-tag.after{background:rgba(0,212,255,.8);color:#000}
+.footer-info{text-align:center;padding:60px 20px;border-top:1px solid #111;margin-top:40px}
+.footer-info p{color:#333;font-size:11px;font-family:monospace;letter-spacing:2px;margin-bottom:6px}
+.footer-info .acc{color:#00d4ff}
+@media(max-width:700px){
+  .photo-block{grid-template-columns:1fr}
+  .photo-big{grid-column:1}
+  .compare{grid-template-columns:1fr}
+  .gallery{padding:20px}
+  .hero h1{font-size:32px}
+  .top{padding:12px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-title">[XXNB26] · ФОТО ПОСЛЕ РЕМОНТА</div>
+  <div class="top-sub">43.89 М² · ХАЙ-ТЕК · ТАШКЕНТ 2026</div>
+</div>
+
+<div class="hero">
+  <h1>КАК БУДЕТ<br><span>ПОСЛЕ РЕМОНТА</span></h1>
+  <p>ВИЗУАЛИЗАЦИЯ · 5 КОМНАТ · CANVAS РЕНДЕР</p>
+</div>
+
+<div class="gallery">
+
+  <!-- ГОСТИНАЯ -->
+  <div class="room-entry">
+    <div class="room-header">
+      <div class="rh-num">01</div>
+      <div class="rh-info"><h2>ГОСТИНАЯ</h2><p>LIVING ROOM · 16 М²</p></div>
+    </div>
+    <div class="photo-block">
+      <div class="photo-big">
+        <canvas id="c-living-main" width="1400" height="700"></canvas>
+        <div class="photo-label">ОБЩИЙ ВИД · LED-ПАНЕЛЬ 65" · КЕРАМОГРАНИТ 60×120</div>
+      </div>
+      <div><canvas id="c-living-wall" width="700" height="420"></canvas>
+        <div class="photo-label">АКЦЕНТ-СТЕНА · ВОРОНЕНЫЙ МЕТАЛЛ</div></div>
+      <div><canvas id="c-living-night" width="700" height="420"></canvas>
+        <div class="photo-label">НОЧНОЙ РЕЖИМ · RGB ПОДСВЕТКА</div></div>
+    </div>
+    <div class="room-specs">
+      <span class="spec-tag">Пол: Керамогранит 60×120</span>
+      <span class="spec-tag">Потолок: Натяжной матовый + LED RGB</span>
+      <span class="spec-tag">ТВ: Samsung 65" 4K</span>
+      <span class="spec-tag">Свет: Xiaomi Smart LED</span>
+      <span class="spec-tag">Стена: Вороненая сталь</span>
+    </div>
+  </div>
+
+  <!-- КУХНЯ -->
+  <div class="room-entry">
+    <div class="room-header">
+      <div class="rh-num">02</div>
+      <div class="rh-info"><h2>КУХНЯ</h2><p>KITCHEN · 6 М²</p></div>
+    </div>
+    <div class="photo-block">
+      <div class="photo-big">
+        <canvas id="c-kitchen-main" width="1400" height="700"></canvas>
+        <div class="photo-label">КУХОННЫЙ ГАРНИТУР · МАТОВЫЙ ЧЁРНЫЙ + СТАЛЬ</div>
+      </div>
+      <div><canvas id="c-kitchen-detail" width="700" height="420"></canvas>
+        <div class="photo-label">РАБОЧАЯ ЗОНА · ПЛИТКА ГРАФИТ</div></div>
+      <div><canvas id="c-kitchen-window" width="700" height="420"></canvas>
+        <div class="photo-label">ВИД С УЛИЦЫ · ОКНО ПАНОРАМНОЕ</div></div>
+    </div>
+    <div class="room-specs">
+      <span class="spec-tag">Фасады: Чёрный мат + нерж.сталь</span>
+      <span class="spec-tag">Столешница: Микроцемент</span>
+      <span class="spec-tag">Вытяжка: Bosch slim</span>
+      <span class="spec-tag">Фартук: Графит 30×60</span>
+    </div>
+  </div>
+
+  <!-- САНУЗЕЛ -->
+  <div class="room-entry">
+    <div class="room-header">
+      <div class="rh-num">03</div>
+      <div class="rh-info"><h2>САНУЗЕЛ</h2><p>BATHROOM · 4 М²</p></div>
+    </div>
+    <div class="photo-block">
+      <div class="photo-big">
+        <canvas id="c-bath-main" width="1400" height="700"></canvas>
+        <div class="photo-label">САНУЗЕЛ · ПЛИТКА АНТРАЦИТ · LED ЗЕРКАЛО</div>
+      </div>
+      <div><canvas id="c-bath-shower" width="700" height="420"></canvas>
+        <div class="photo-label">ДУШ-КАБИНА СТЕКЛЯННАЯ</div></div>
+      <div><canvas id="c-bath-mirror" width="700" height="420"></canvas>
+        <div class="photo-label">LED ЗЕРКАЛО 60×80 + ЧАСЫ</div></div>
+    </div>
+    <div class="room-specs">
+      <span class="spec-tag">Плитка: Антрацит 30×60</span>
+      <span class="spec-tag">Унитаз: Подвесной Cersanit</span>
+      <span class="spec-tag">Тёплый пол: Devi</span>
+      <span class="spec-tag">Зеркало: LED + часы</span>
+    </div>
+  </div>
+
+  <!-- ПРИХОЖАЯ -->
+  <div class="room-entry">
+    <div class="room-header">
+      <div class="rh-num">04</div>
+      <div class="rh-info"><h2>ПРИХОЖАЯ</h2><p>HALLWAY · 5 М²</p></div>
+    </div>
+    <div class="photo-block">
+      <div class="photo-big">
+        <canvas id="c-hall-main" width="1400" height="700"></canvas>
+        <div class="photo-label">ПРИХОЖАЯ · MATT BLACK ДВЕРИ · ЗЕРКАЛО 2М</div>
+      </div>
+    </div>
+    <div class="room-specs">
+      <span class="spec-tag">Стены: Микроцемент тёмный</span>
+      <span class="spec-tag">Двери: Matt Black стальные</span>
+      <span class="spec-tag">Зеркало: 60×200 с LED</span>
+      <span class="spec-tag">Замок: Умный Ajax</span>
+    </div>
+  </div>
+
+  <!-- СПАЛЬНЯ -->
+  <div class="room-entry">
+    <div class="room-header">
+      <div class="rh-num">05</div>
+      <div class="rh-info"><h2>СПАЛЬНЯ</h2><p>BEDROOM · 12 М²</p></div>
+    </div>
+    <div class="photo-block">
+      <div class="photo-big">
+        <canvas id="c-bed-main" width="1400" height="700"></canvas>
+        <div class="photo-label">СПАЛЬНЯ · КРОВАТЬ С ПОДСВЕТКОЙ · МЕТАЛЛ-СТЕНА</div>
+      </div>
+      <div><canvas id="c-bed-light" width="700" height="420"></canvas>
+        <div class="photo-label">НОЧНАЯ ПОДСВЕТКА RGB ФИОЛЕТОВАЯ</div></div>
+      <div><canvas id="c-bed-wardrobe" width="700" height="420"></canvas>
+        <div class="photo-label">ГАРДЕРОБ ЗЕРКАЛЬНЫЙ ВСТРОЕННЫЙ</div></div>
+    </div>
+    <div class="room-specs">
+      <span class="spec-tag">Кровать: 160×200 + электробаза</span>
+      <span class="spec-tag">Акцент: Вороненый металл</span>
+      <span class="spec-tag">Свет: RGB Ambient</span>
+      <span class="spec-tag">Климат: Mitsubishi</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-info">
+  <p class="acc">КВАРТИРА 43.89 М² · ХАЙ-ТЕК ДИЗАЙН 2026</p>
+  <p>Ташкент · Мирзо Улугбек · ул.Берк 6, кв.53</p>
+  <p>Кадастр: 10:09:02:01:02:5112:0001:053 · Собственник: Садовникова Т.Е.</p>
+  <p style="margin-top:12px;color:#00d4ff">Смета: ≈ $13 250 · 170 млн сум · 90 дней</p>
+</div>
+
+<script src="renders.js"></script>
+</body>
+</html>
